@@ -1,0 +1,15 @@
+from matplotlib import pyplot as plt
+import numpy as np
+ 
+tipos = ('HEV(elétricos hibridos) 6711)', 'PHEV(elétricos hibridos-plugin) 1845','BEV(elétricos 100%bateria) 1288')
+vendas =(6711,1845,1288) 
+
+
+
+
+fig = plt.figure()
+ax = fig.add_axes([0, 0, 1, 1])
+ax.axis('equal')
+ax.pie(vendas, labels = tipos, autopct='%1.2f%%')
+plt.legend()
+plt.show()
