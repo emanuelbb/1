@@ -1,0 +1,47 @@
+import matplotlib.pyplot as plt
+  
+
+def addlabels(x,y):
+    for i in range(len(x)):
+        plt.text(i, y[i], y[i], ha = 'center')
+  
+if __name__ == '__main__':
+
+   vendas1=(1542, 649, 367)
+vendas2=(2344,689, 402)
+vendas3=(2825, 1845, 1288)
+x = ( 'hev', 'phev', 'behv')
+carros= ('HEV (elétricos híbridos),PHEV (elétricos híbridos plug-in),BEV (elétricos 100% a bateria)')  
+
+plt.ion()      
+plt.bar(x, vendas1,color=('blue','orange','green'))   
+addlabels(x, vendas1)
+plt.title(carros,fontsize = 8)
+plt.xlabel('Janeiro')
+plt.ylabel('vendas')  
+plt.pause(12)
+plt.clf()
+plt.ioff()
+
+
+
+plt.ion()     
+plt.bar(x, vendas2,color=('blue','orange','green'))    
+addlabels(x, vendas2)
+plt.title(carros,fontsize = 8)
+plt.xlabel('Fevereiro')
+plt.ylabel('vendas')  
+plt.pause(3)
+plt.clf()
+plt.ioff()
+
+
+plt.ion()      
+plt.bar(x,vendas3,color=('blue','orange','green' ))   
+addlabels(x,vendas3)
+plt.title(carros,fontsize = 8)
+plt.xlabel('Março')
+plt.ylabel('vendas')  
+plt.pause(5)
+plt.ioff()
+
